@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const stream = require('stream');
 const { promisify } = require('util');
 const fs = require('fs');
