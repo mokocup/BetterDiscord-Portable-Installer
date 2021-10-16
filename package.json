@@ -8,9 +8,11 @@
   "private": false,
   "scripts": {
     "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "build": "pkg ."
   },
   "devDependencies": {
+    "nodemon": "^2.0.13",
     "pkg": "^5.3.3"
   },
   "dependencies": {
