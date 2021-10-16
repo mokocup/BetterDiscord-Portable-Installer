@@ -1,11 +1,16 @@
 {
-  "name": "betterdiscordportable",
+  "name": "betterdiscordportableinstaller",
   "description": "[Unofficial] BBD (Bandaged BetterDiscord) Installer for Discord PTB Portable",
-  "version": "1.0.0",
   "version": "1.1.0",
   "main": "./src/index.js",
   "author": "mokocup",
   "license": "MIT",
+  "repository": "https://github.com/mokocup/BetterDiscordPortableInstaller",
+  "homepage": "https://github.com/mokocup/BetterDiscordPortableInstaller",
+  "bugs": "https://github.com/mokocup/BetterDiscordPortableInstaller/issues",
+  "os": [
+    "win32"
+  ],
   "private": false,
   "scripts": {
     "start": "node ./src/index.js",
