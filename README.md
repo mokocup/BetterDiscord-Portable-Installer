@@ -5,7 +5,7 @@
 
 This will link you to the latest builds found in the [releases](https://github.com/mokocup/BetterDiscordPortableInstaller/releases) tab of this repository.
 
-| [Windows]()  |
+| [Windows](https://github.com/mokocup/BetterDiscordPortableInstaller/releases/tag/v1.0.0)  |
 | ------------- |
 
 ## Running the project
