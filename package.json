@@ -5,9 +5,9 @@
   "main": "./src/index.js",
   "author": "mokocup",
   "license": "MIT",
-  "repository": "https://github.com/mokocup/BetterDiscordPortableInstaller",
-  "homepage": "https://github.com/mokocup/BetterDiscordPortableInstaller",
-  "bugs": "https://github.com/mokocup/BetterDiscordPortableInstaller/issues",
+  "repository": "https://github.com/mokocup/BetterDiscord-Portable-Installer",
+  "homepage": "https://github.com/mokocup/BetterDiscord-Portable-Installer",
+  "bugs": "https://github.com/mokocup/BetterDiscord-Portable-Installer/issues",
   "os": [
     "win32"
   ],
