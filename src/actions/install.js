@@ -17,17 +17,32 @@ let bdThemesFolder;
 let asarPath;
 
 const mapDirectory = (_discordPath) => {
-
     discordPath = _discordPath;
 
-    // Map global path for compatible
     bdFolder = path.join(discordPath, "..", "..", "..", "BetterDiscord");
-    asarPath = path.join(discordPath, "betterdiscord.asar");
-
-    // Unusable since first time run will create them
     bdDataFolder = path.join(bdFolder, "data");
     bdPluginsFolder = path.join(bdFolder, "plugins");
     bdThemesFolder = path.join(bdFolder, "themes");
+
+    asarPath = path.join(bdFolder, "betterdiscord.asar");
+}
+
+const makeDirectories = async (...folders) => {
+    for (const folder of folders) {
+        if (exist(folder)) {
+            console.log(`✅ Directory exists: ${folder}`);
+            continue;
+        }
+        try {
+            fs.mkdirSync(folder);
+            console.log(`✅ Directory created: ${folder}`);
+        }
+        catch (err) {
+            console.log(`❌ Failed to create directory: ${folder}`);
+            console.log(`❌ ${err.message}`);
+            return err;
+        }
+    }
 }
 
 const getLatestUrl = async () => {
@@ -110,6 +125,8 @@ module.exports = async (discordPath) => {
     mapDirectory(discordPath);
 
     await migratePortable();
+
+    await makeDirectories(bdFolder, bdDataFolder, bdThemesFolder, bdPluginsFolder);
 
     await downloadAsar();
 
